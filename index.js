@@ -6,7 +6,7 @@ const bot = new discord.Client();
 
 bot.on("ready", async () => {
 
-    console.log(`${bot.user.username} is Online!!!`)
+    console.log(`${bot.user.username} is online!!!`)
 
     bot.user.setActivity("met zichzelf", { type: "PLAYING" })
 
