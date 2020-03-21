@@ -6,9 +6,9 @@ const bot = new discord.Client();
 
 bot.on("ready", async () => {
 
-    console.log(`${bot.user.username} is online!!!`)
+    console.log(`${bot.user.username} is Online!!!`)
 
-    bot.user.setActivity("met zichzelf", { type: "PLAYING" })
+    bot.user.setActivity("vissen", { type: "WATCHING" })
 
 });
 
@@ -35,7 +35,7 @@ bot.on("message", async message => {
 
         var botEmbed = new discord.RichEmbed()
             .setDescription("Haha")
-            .setColor("#0000")
+            .setColor("#1111")
             .addField("Bot Naam:", bot.user.username);
 
         return message.channel.send(botEmbed);
