@@ -6,9 +6,9 @@ const bot = new discord.Client();
 
 bot.on("ready", async () => {
 
-    console.log(`${bot.user.username} is Online!!!`)
+    console.log(`${bot.user.tag} is Online!!!`)
 
-    bot.user.setActivity("vissen", { type: "WATCHING" })
+    bot.user.setActivity("gta5", { type: "PLAYING" })
 
 });
 
