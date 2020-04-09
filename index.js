@@ -6,9 +6,9 @@ const bot = new discord.Client();
 
 bot.on("ready", async () => {
 
-    console.log(`${bot.user.username} is Online!!!`)
+    console.log(`${bot.user.tag} is Online!!!`)
 
-    bot.user.setActivity("vissen", { type: "WATCHING" })
+    bot.user.setActivity("gta5", { type: "PLAYING" })
 
 });
 
@@ -28,7 +28,7 @@ bot.on("message", async message => {
 
     if (command === `${prefix}hallo`) {
 
-        return message.channel.send(`Hallo,`);
+        return message.channel.send(`Hallo, ${message.author}`);
     }
 
     if (command === `${prefix}test`) {
