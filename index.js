@@ -34,7 +34,7 @@ bot.on("message", async message => {
     if (command === `${prefix}test`) {
 
         var botEmbed = new discord.RichEmbed()
-            .setDescription("Haha")
+            .setDescription("hoho")
             .setColor("#1111")
             .addField("Bot Naam:", bot.user.username);
 
