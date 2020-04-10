@@ -31,7 +31,7 @@ bot.on("message", async message => {
     if (command === `${prefix}hallo`) {
 
         return message.channel.send(`Hallo, ${message.author}.`);
-    }
+    };
 
     if (command === `${prefix}info`) {
 
@@ -39,12 +39,12 @@ bot.on("message", async message => {
             .setDescription("bot info")
             .setColor("#1111")
             .addField("Bot Naam:", bot.user.username);
-             message.channel.send(botEmbed);
+             
             
-            message.channel.send(botEmbed);
+            
 
-        return;
-    }
+        return message.channel.send(botEmbed);
+    };
 
 });
 
