@@ -75,7 +75,7 @@ bot.on("message", async message => {
 
         var reason = arguments.join(" ").slice(22);
 
-        if (message.member.hasPermission("KICK_MEMBER")) return message.channel.send("Je hebt geen permissions om dit uit tevoeren");
+        if (!message.member.hasPermission("KICK_MEMBER")) return message.channel.send("Je hebt geen permissions om dit uit tevoeren");
 
         if (kickUser.hasPermission("KICK_MEMBERS")) return message.channel.send("Deze gebruiker kan je niet kicken");
 
@@ -87,13 +87,13 @@ bot.on("message", async message => {
             .addField("reden", reason);
 
         var kickChannel = message.guild.channels.find(r => r.name === "reports");
-        if (kickChannel) return message.guild.send("Kan het kanaal niet vinden");
+        if (!kickChannel) return message.channel.send("Kan het kanaal niet vinden");
 
         message.guild.member(kickUser).kick(reason);
 
         kickChannel.send(kick);
 
-        return;
+        return message.channel.send("Gebruiker is gekicked.");
 
     }
 
