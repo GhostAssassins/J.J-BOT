@@ -6,21 +6,23 @@ const bot = new discord.Client();
 
 bot.on("ready", async () => {
 
-    console.log(`${bot.user.tag} is Online!!!`)
+    console.log(`${bot.user.tag} is Online!!!`);
 
-    bot.user.setActivity("gta5", { type: "PLAYING" })
+    bot.user.setActivity("gta5", { type: "PLAYING" });
 
 });
 
 
 bot.on("message", async message => {
+
+    // Als bot bericht stuurt stuur dan return
     if (message.author.bot) return;
 
     if (message.channel.type === "dm") return;
 
     var prefix = botConfig.prefix;
 
-    var messageArray = message.content.split(" ")
+    var messageArray = message.content.split(" ");
 
     var command = messageArray[0];
 
