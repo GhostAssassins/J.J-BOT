@@ -33,7 +33,7 @@ bot.on("message", async message => {
         return message.channel.send(`Hallo, ${message.author}`);
     }
 
-    if (command === `${prefix}test`) {
+    if (command === `${prefix}info`) {
 
         var botEmbed = new discord.RichEmbed()
             .setDescription("bot info")
